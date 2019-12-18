@@ -6,6 +6,12 @@ export default Controller.extend({
       this.store.createRecord('user', {
         name: userName
       }).save();
+    },
+
+    onDelete(userId) {
+      this.store.findRecord('user', userId, { backgroundReload: false }).then((user) => {
+        user.destroyRecord();
+      });
     }
   }
 });

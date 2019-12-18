@@ -1,7 +1,7 @@
 <UserForm @onSubmit={{action "onUserFormSubmit"}}/>
 <ul>
   {{#each this.model as |user|}}
-    <li>{{user.name}}</li>
+    <li>{{user.name}} <button onclick={{action "onDelete" user.id}}>X</button></li>
   {{/each}}
 </ul>
 {{outlet}}
