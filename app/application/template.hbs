@@ -1,2 +1,7 @@
 <UserForm @onSubmit={{action "onUserFormSubmit"}}/>
+<ul>
+  {{#each this.model as |user|}}
+    <li>{{user.name}}</li>
+  {{/each}}
+</ul>
 {{outlet}}
