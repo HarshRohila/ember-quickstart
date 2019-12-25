@@ -12,6 +12,10 @@ export default Controller.extend({
       this.store.findRecord('user', userId, { backgroundReload: false }).then((user) => {
         user.destroyRecord();
       });
+    },
+
+    visitProtected() {
+      this.transitionToRoute('protected');
     }
   }
 });
