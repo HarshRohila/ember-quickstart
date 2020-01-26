@@ -1,6 +1,5 @@
-import Model from '@ember-data/model';
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
 export default Model.extend({
-  name: DS.attr('string')
+  name: attr('string')
 });
